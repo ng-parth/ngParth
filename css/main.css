@@ -1106,7 +1106,7 @@ header .logo {
 	float: left;
 	margin-left: 20px;
 	margin-right: 50px;
-	margin-top: 25px;
+	margin-top: 20px;
 	position: relative;
 }
 header .logo a {
@@ -1114,13 +1114,15 @@ header .logo a {
 	margin: 0;
 	padding: 0;
 	border: none;
-	font: 0/0 a;
-	text-shadow: none;
-	color: transparent;
-	width: 92px;
-	height: 15px;
-	background: url("../images/logo.png") no-repeat center;
-	background-size: 92px 15px;
+	font-family: "poppins-medium", sans-serif;
+	color: white;
+	font-size: 20px;
+	/* font: 0/0 a; */
+	/* text-shadow: none; */
+	/* width: 92px; */
+	/* height: 15px; */
+	/* background: url("../images/logo.png") no-repeat center; */
+	/* background-size: 92px 15px; */
 }
 
 /**
@@ -1314,6 +1316,7 @@ header .logo a {
 	height: 100%;
 	background: #111111;
 	opacity: .85;
+	/*background-color: rgba(255, 255, 255, 0.5);*/
 }
 
 .intro-content {
