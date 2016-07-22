@@ -286,6 +286,26 @@
 
 		}		
 
-	});		
+	});
+
+
+	/*----------------------------------------------------- */
+	/* Custom JS
+	 ------------------------------------------------------- */
+
+	var startDate = new Date("2013 march");
+	var today = new Date();
+	var yearInMS = 365 * 24 * 60 * 60 * 1000;
+	var monthInMS = 30 * 24 * 60 * 60 * 1000;
+	var totalExperienceInMS = today.getTime() - startDate.getTime() + (3 * monthInMS);
+	var years = Math.floor(totalExperienceInMS / yearInMS);
+	var months = Math.round((totalExperienceInMS - (years * yearInMS)) / monthInMS);
+	var totalExp = years;
+	if (months > 5 && months < 11) {
+		totalExp += 0.5;
+	} else if (months > 10) {
+		totalExp++;
+	}
+	$('#expYears')[0].innerHTML = totalExp;
 
 })(jQuery);
