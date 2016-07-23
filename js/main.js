@@ -334,7 +334,7 @@
 		from: 'Sep 2012',
 		to: 'Dec 2012',
 		institute: 'Study and Internship @ Germany',
-		description: ''
+		description: 'This program was curated as a part of MOU signed between Wismar University, Germany and GTU, Ahmedabad, India. Under this program 12 students we chosen from UG and PG programs running under GTU and were given the chance to explore the technology pioneer nation of Germany.' + br + 'Various tech, non-tech programs, socio-cultural meetups, industrial visits and meeting with local politicians were held. This helped the students to gain an insight in their best practices and how those practices can help to achieve high aims and discipline in our nation.'
 	};
 	eduTimeline.push(germany);
 
