@@ -293,6 +293,8 @@
 	/* Custom JS
 	 ------------------------------------------------------- */
 
+
+	//TOTAL EXPERIENCE
 	var startDate = new Date("2013 march");
 	var today = new Date();
 	var yearInMS = 365 * 24 * 60 * 60 * 1000;
@@ -308,4 +310,117 @@
 	}
 	$('#expYears')[0].innerHTML = totalExp;
 
+	//EDUCATION
+	var br = '</br>';
+	var eduTimeline = [];
+	var hsc = {
+		degree: 'HSC',
+		from: 'Passed',
+		to: 'March 2008',
+		institute: 'Ashadham, Vapi',
+		description: ''
+	};
+	eduTimeline.push(hsc);
+	var be = {
+		degree: 'Bachelor Degree',
+		from: '2008',
+		to: '2012',
+		institute: 'Charotar Institute Of Technology',
+		description: 'Completed my Bachelor Of Engineering (BE) in Information Technology with 7.55 CGPA.'
+	};
+	eduTimeline.push(be);
+	var germany = {
+		degree: 'Exchange Program',
+		from: 'Sep 2012',
+		to: 'Dec 2012',
+		institute: 'Study and Internship @ Germany',
+		description: ''
+	};
+	eduTimeline.push(germany);
+
+	//WORK EXPERIENCE
+
+	var workExp = [];
+	var vcs = {
+		company: 'Value Chain Solution',
+		link: 'http://www.valuechain.co.in/',
+		from: 'January 2012',
+		to: 'April 2012',
+		title: 'Software Engineer',
+		description: 'This was the start of my industrial experience and it taught me a lot: technical as well as non-tech aspects of the dymanic IT world.' + br +
+					'As a part of professional training at VCS, Ahmedabad I was given 2 projects to accomplish which were companies internal projects.' + br +
+					'I was responsible for documentation and development of two projects.' + br + '1) Project Knowledge Base' + br + '2) Project Review.'
+	};
+	workExp.push(vcs);
+	var bhavyaMlm = {
+		company: 'Bhavya Technologies',
+		link: 'http://www.bhavyatech.co.in/',
+		from: 'July 2011',
+		to: 'April 2012',
+		title: 'Trainee',
+		description: 'This was my final year project. With support from Bhavya technologies, Ahmedabad this project was the first major project carried out by me in team of four.' + br +
+					'This was an attempt to create a customised MLM system which could be easily configured to matrix as desired by the client.'
+	};
+	workExp.push(bhavyaMlm);
+	var radix = {
+		company: 'Radix',
+		link: 'http://radixweb.com/',
+		from: 'March 2013',
+		to: 'October 2014',
+		title: 'Web Engineer',
+		description: 'Radix provides outsourcing services in the fields of Cloud Computing, Printing related software and web and mobile apps development services.' + br +
+					'As a Software Engineer, I was a part of development team where my roles and responsibilities includes but not limited to overall development of project from designing, development, unit testing as well as deployment.'
+	};
+	workExp.push(radix);
+	var fundoo = {
+		company: 'Fundoo Solutions',
+		link: 'http://www.befundoo.com',
+		from: 'October 2014',
+		to: 'May 2015',
+		title: 'Software Engineer - Consultant',
+		description: 'I was involved in providing best possible solution to client and development, extension and migration of there existing projects.\n' + br +
+		'Some projects which I worked on are:\n\n' + br +
+		'1) Custom Editor: A text editor which provides intelli-sense based on custom language as per clients requirement. Also allowing to add static and dynamic methods, functions and formulae.\n\n' + br +
+		'2) Internationalisation support: Module and routes based efficient internationalisation system for multiple languages.\n\n' + br +
+		'3) Working on small parts of multiple android app.'
+	};
+	workExp.push(fundoo);
+	var hs = {
+		company: 'Hopscotch',
+		link: 'https://www.hopscotch.in',
+		from: 'June 2015',
+		to: 'Present',
+		title: 'Software Engineer',
+		description: 'Hopscotch.in is a leading discovery-based e-Commerce destination for Indian moms, offering a wide range of curated children’s merchandise at affordable prices.'
+	};
+	workExp.push(hs);
+
+	createEduTimelines(eduTimeline);
+	createWorkTimelines(workExp);
+
+	function createEduTimelines(edu) {
+		edu.reverse();
+		var eduStr = '';
+		$.each(edu, function(idx, e) {
+			var template = '' +
+					'<div class="timeline-block"><div class="timeline-ico"><i class="fa fa-graduation-cap"></i></div>' +
+					'<div class="timeline-header"><h3>' + e.degree + '</h3><p>' + e.from + ' - ' + e.to + '</p></div>' +
+					'<div class="timeline-content"><h4>' + e.institute + '</h4><p>' + e.description + '</p></div></div> <!-- /timeline-block -->';
+			eduStr += template;
+		});
+		$('#education')[0].innerHTML = eduStr;
+	}
+	function createWorkTimelines(work) {
+		work.reverse();
+		var expStr = '';
+		$.each(work, function(idx, w) {
+			var template = '' +
+					'<div class="timeline-block"><div class="timeline-ico"><i class="fa fa-briefcase"></i></div>' +
+					'<div class="timeline-header"><a href="' + w.link + '" title="' + w.link + '" target="_blank"><h3 class="company">' + w.company + '</h3></a><p>' + w.from + ' - ' + w.to + '</p></div>' +
+					'<div class="timeline-content"><h4>' + w.title + '</h4>' +
+					'<p>' + w.description + '</p></div></div> <!-- /timeline-block -->';
+			expStr += template;
+		});
+		$('#experience')[0].innerHTML = expStr;
+	}
 })(jQuery);

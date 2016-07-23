@@ -2599,4 +2599,18 @@ footer .copyright span:last-child::after {
 	background: #000000;
 }
 
+/***
+**
+*    CUSTOM CSS
+**
+***/
+
+.company:hover {
+	cursor: pointer;
+	color: #FF0077;
+}
+
+
+
+
 /*# sourceMappingURL=main.css.map */
