@@ -1296,7 +1296,7 @@ header .logo a {
  * ------------------------------------------------------------------- 
  */
 #intro {
-	background: #151515 url(../images/intro-bg.jpg) no-repeat center bottom;
+	background: #151515 url(../images/snow.jpg) no-repeat right top;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	background-size: cover;
@@ -1315,7 +1315,7 @@ header .logo a {
 	width: 100%;
 	height: 100%;
 	background: #111111;
-	opacity: .85;
+	opacity: .30;
 	/*background-color: rgba(255, 255, 255, 0.5);*/
 }
 
@@ -1356,7 +1356,7 @@ header .logo a {
 	text-transform: uppercase;
 	letter-spacing: .2rem;
 	color: #FFFFFF;
-	text-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+	font-weight: bold;
 }
 .intro-content .intro-position span {
 	display: inline-block;
@@ -2114,7 +2114,7 @@ header .logo a {
 	width: 100%;
 	height: 100%;
 	background: #151515;
-	opacity: .9;
+	opacity: .6;
 }
 
 #services .section-intro {
@@ -2267,6 +2267,23 @@ header .logo a {
 	color: rgba(255, 255, 255, 0.7);
 }
 
+
+/*#contact {*/
+	/*background: #FFFFFF;*/
+	/*padding-top: 12rem;*/
+	/*padding-bottom: 7.2rem;*/
+/*}*/
+/*!*#contact .section-intro h1 {*!*/
+/*!*color: white;*!*/
+/*!*}*!*/
+/*#contact .section-intro h5 {*/
+	/*color: #FF0077;*/
+/*}*/
+/*!*#contact .section-intro p {*!*/
+/*!*color: rgba(255, 255, 255, 0.7);*!*/
+/*!*}*!*/
+
+
 /* contact form */
 .contact-form {
 	max-width: 740px;
@@ -2339,8 +2356,8 @@ header .logo a {
 #contact input[type="text"],
 #contact input[type="password"],
 #contact input[type="email"] {
-	height: 6.6rem;
-	padding: 1.8rem 2rem;
+	height: 4rem;
+	padding: 1rem;
 }
 #contact input[type="text"]:focus,
 #contact input[type="password"]:focus,
@@ -2349,8 +2366,8 @@ header .logo a {
 	color: #FFFFFF;
 }
 #contact textarea {
-	min-height: 20rem;
-	padding: 1.8rem 2rem;
+	min-height: 12rem;
+	padding: 1rem;
 }
 #contact textarea:focus {
 	border-color: #FF0077;
