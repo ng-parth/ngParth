@@ -1,14 +1,15 @@
 ﻿<?php
 
 // Replace this with your own email address
-$siteOwnersEmail = 'ppmistry204@yahoo.co.in';
+//changed bcs of hosting server's restrictions
+$siteOwnersEmail = 'parth@ng-parth.xyz';
 
 
 if($_POST) {
 
    $name = trim(stripslashes($_POST['contactName']));
    $email = trim(stripslashes($_POST['contactEmail']));
-   $subject = '[ng-parth.xyz]' + trim(stripslashes($_POST['contactSubject']));
+   $subject = '[ng-parth.xyz]' . trim(stripslashes($_POST['contactSubject']));
    $contact_message = trim(stripslashes($_POST['contactMessage']));
 
    // Check Name
@@ -29,7 +30,7 @@ if($_POST) {
 
    // Set Message
    $message .= "Email from: " . $name . "<br />";
-	$message .= "Email address: " . $email . "<br />";
+   $message .= "Email address: " . $email . "<br />";
    $message .= "Message: <br />";
    $message .= $contact_message;
    $message .= "<br /> ----- <br /> This email was sent from your site's contact form. <br />";
