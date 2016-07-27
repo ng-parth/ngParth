@@ -137,7 +137,7 @@
 	/*-----------------------------------------------------*/
   	/* Navigation Menu
    ------------------------------------------------------ */  
-   var toggleButton = $('.menu-toggle'),
+   var toggleButton = $('.top-bar'),
        nav = $('.main-navigation');
 
    // toggle button
