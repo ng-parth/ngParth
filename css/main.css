@@ -1494,8 +1494,7 @@ header .logo a {
  */
 #about {
 	background: #FFFFFF;
-	padding-top: 12rem;
-	padding-bottom: 15rem;
+	padding: 8rem 0;
 }
 #about .section-intro {
 	margin-bottom: 3rem;
@@ -1624,8 +1623,7 @@ header .logo a {
  * ------------------------------------------------------------------- 
  */
 #resume {
-	padding-top: 12rem;
-	padding-bottom: 12rem;
+	padding: 8rem 0;
 }
 
 #resume .resume-header {
@@ -2098,12 +2096,11 @@ header .logo a {
  * ------------------------------------------------------------------- 
  */
 #services {
-	background: #313131 url(../images/bg.jpg) no-repeat center;
+	background: #313131 url(../images/service-bg.jpg) no-repeat center;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	background-size: cover;
-	padding-top: 12rem;
-	padding-bottom: 12rem;
+	padding: 10rem 0;
 	color: white;
 	position: relative;
 }
@@ -2114,7 +2111,7 @@ header .logo a {
 	width: 100%;
 	height: 100%;
 	background: #151515;
-	opacity: .6;
+	opacity: .3;
 }
 
 #services .section-intro {
@@ -2153,7 +2150,8 @@ header .logo a {
 	color: #FFFFFF;
 }
 .services-list .desc {
-	color: rgba(255, 255, 255, 0.6);
+	color: rgba(255, 255, 255, 0.7);
+    font-weight: bold;
 }
 
 /* pagination */
@@ -2253,35 +2251,19 @@ header .logo a {
  * ------------------------------------------------------------------- 
  */
 #contact {
-	background: #151515;
-	padding-top: 12rem;
-	padding-bottom: 7.2rem;
+	background: #FFFFFF;
+	padding-top: 8rem;
+	padding-bottom: 6rem;
 }
-#contact .section-intro h1 {
-	color: white;
-}
+/*#contact .section-intro h1 {*/
+	/*color: white;*/
+/*}*/
 #contact .section-intro h5 {
 	color: #FF0077;
 }
-#contact .section-intro p {
-	color: rgba(255, 255, 255, 0.7);
-}
-
-
-/*#contact {*/
-	/*background: #FFFFFF;*/
-	/*padding-top: 12rem;*/
-	/*padding-bottom: 7.2rem;*/
+/*#contact .section-intro p {*/
+	/*color: rgba(255, 255, 255, 0.7);*/
 /*}*/
-/*!*#contact .section-intro h1 {*!*/
-/*!*color: white;*!*/
-/*!*}*!*/
-/*#contact .section-intro h5 {*/
-	/*color: #FF0077;*/
-/*}*/
-/*!*#contact .section-intro p {*!*/
-/*!*color: rgba(255, 255, 255, 0.7);*!*/
-/*!*}*!*/
 
 
 /* contact form */
@@ -2290,19 +2272,19 @@ header .logo a {
 }
 
 .contact-form ::-webkit-input-placeholder {
-	color: rgba(255, 255, 255, 0.3);
+	color: #888888;
 }
 .contact-form :-moz-placeholder {
-	color: rgba(255, 255, 255, 0.3);  /* Firefox 18- */
+	color: #888888;  /* Firefox 18- */
 }
 .contact-form ::-moz-placeholder {
-	color: rgba(255, 255, 255, 0.3);  /* Firefox 19+ */
+	color: #888888;  /* Firefox 19+ */
 }
 .contact-form :-ms-input-placeholder {
-	color: rgba(255, 255, 255, 0.3);
+	color: #888888;
 }
 .contact-form .placeholder {
-	color: rgba(255, 255, 255, 0.3) !important;
+	color: #888888 !important;
 }
 
 #contact form {
@@ -2348,10 +2330,10 @@ header .logo a {
 #contact input[type="email"],
 #contact textarea {
 	width: 100%;
-	color: rgba(255, 255, 255, 0.7);
+	color: darkslategray;
 	margin-bottom: 0;
 	border: none;
-	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+	border-bottom: 1px solid darkslategray;
 }
 #contact input[type="text"],
 #contact input[type="password"],
@@ -2363,7 +2345,7 @@ header .logo a {
 #contact input[type="password"]:focus,
 #contact input[type="email"]:focus {
 	border-color: #FF0077;
-	color: #FFFFFF;
+	color: darkslategray;
 }
 #contact textarea {
 	min-height: 12rem;
@@ -2371,7 +2353,7 @@ header .logo a {
 }
 #contact textarea:focus {
 	border-color: #FF0077;
-	color: #FFFFFF;
+	color: darkslategray;
 }
 #contact button.submitform {
 	font-size: 1.5rem;
@@ -2390,7 +2372,7 @@ header .logo a {
 }
 #message-warning, #message-success {
 	display: none;
-	background: #0d0d0d;
+	background: #FFFFFF;
 	border-radius: 3px;
 	padding: 3rem;
 	margin-bottom: 3.6rem;
@@ -2511,7 +2493,7 @@ header .logo a {
  * ------------------------------------------------------------------- 
  */
 footer {
-	padding-bottom: 3rem;
+	padding: 1.5rem 0;
 	font-size: 1.4rem;
 	font-family: "poppins-regular", sans-serif;
 }
