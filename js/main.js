@@ -1,9 +1,9 @@
-/** 
+/**
  * ===================================================================
  * main js
  *
- * ------------------------------------------------------------------- 
- */ 
+ * -------------------------------------------------------------------
+ */
 
 (function($) {
 
@@ -11,16 +11,16 @@
 
 	/*---------------------------------------------------- */
 	/* Preloader
-	------------------------------------------------------ */ 
+	------------------------------------------------------ */
    $(window).load(function() {
 
-      // will first fade out the loading animation 
+      // will first fade out the loading animation
     	$("#loader").fadeOut("slow", function(){
 
         // will fade out the whole DIV that covers the website.
         $("#preloader").delay(300).fadeOut("slow");
 
-      });       
+      });
 
   	})
 
@@ -37,13 +37,13 @@
 
 	/*---------------------------------------------------- */
 	/* FitVids
-	------------------------------------------------------ */ 
+	------------------------------------------------------ */
   	$(".fluid-video-wrapper").fitVids();
 
 
 	/*---------------------------------------------------- */
 	/* Owl Carousel
-	------------------------------------------------------ */ 
+	------------------------------------------------------ */
 	$("#owl-slider").owlCarousel({
         navigation: false,
         pagination: true,
@@ -61,7 +61,7 @@
   	------------------------------------------------------- */
 	$('.alert-box').on('click', '.close', function() {
 	  $(this).parent().fadeOut(500);
-	});	
+	});
 
 
 	/*----------------------------------------------------- */
@@ -74,7 +74,7 @@
 
    	handler: function(direction) {
 
-      	if (direction === "down") {       		
+      	if (direction === "down") {
 
 			   stats.each(function () {
 				   var $this = $(this);
@@ -88,16 +88,16 @@
 				  	});
 				});
 
-       	} 
+       	}
 
        	// trigger once only
-       	this.destroy();      	
+       	this.destroy();
 
 		},
-			
+
 		offset: "90%"
-	
-	});	
+
+	});
 
 
 	/*---------------------------------------------------- */
@@ -107,9 +107,9 @@
 
 	containerProjects.imagesLoaded( function() {
 
-		containerProjects.masonry( {		  
+		containerProjects.masonry( {
 		  	itemSelector: '.folio-item',
-		  	resize: true 
+		  	resize: true
 		});
 
 	});
@@ -133,10 +133,10 @@
    	$.magnificPopup.close();
    });
 
-	
+
 	/*-----------------------------------------------------*/
   	/* Navigation Menu
-   ------------------------------------------------------ */  
+   ------------------------------------------------------ */
    var toggleButton = $('.top-bar'),
        nav = $('.main-navigation');
 
@@ -150,13 +150,13 @@
 	});
 
    // nav items
-  	nav.find('li a').on("click", function() {   
+  	nav.find('li a').on("click", function() {
 
-   	// update the toggle button 		
-   	toggleButton.toggleClass('is-clicked'); 
+   	// update the toggle button
+   	toggleButton.toggleClass('is-clicked');
    	// fadeout the navigation panel
-   	nav.fadeOut();   		
-   	     
+   	nav.fadeOut();
+
   	});
 
 
@@ -164,7 +164,7 @@
   	/* Highlight the current section in the navigation bar
   	------------------------------------------------------ */
 	var sections = $("section"),
-	navigation_links = $("#main-nav-wrap li a");	
+	navigation_links = $("#main-nav-wrap li a");
 
 	sections.waypoint( {
 
@@ -176,12 +176,12 @@
 
 			if (direction === "up") active_section = active_section.prev();
 
-			var active_link = $('#main-nav-wrap a[href="#' + active_section.attr("id") + '"]');			
+			var active_link = $('#main-nav-wrap a[href="#' + active_section.attr("id") + '"]');
 
          navigation_links.parent().removeClass("current");
 			active_link.parent().addClass("current");
 
-		}, 
+		},
 
 		offset: '25%'
 	});
@@ -191,7 +191,7 @@
   	/* Smooth Scrolling
   	------------------------------------------------------ */
   	$('.smoothscroll').on('click', function (e) {
-	 	
+
 	 	e.preventDefault();
 
    	var target = this.hash,
@@ -203,13 +203,13 @@
       	window.location.hash = target;
       });
 
-  	});  
-  
+  	});
+
 
    /*---------------------------------------------------- */
 	/*  Placeholder Plugin Settings
-	------------------------------------------------------ */ 
-	$('input, textarea, select').placeholder()  
+	------------------------------------------------------ */
+	$('input, textarea, select').placeholder()
 
 
   	/*---------------------------------------------------- */
@@ -224,28 +224,28 @@
 
 			var sLoader = $('#submit-loader');
 
-			$.ajax({      	
+			$.ajax({
 
 		      type: "POST",
 		      url: "inc/sendEmail.php",
 		      data: $(form).serialize(),
-		      beforeSend: function() { 
+		      beforeSend: function() {
 
-		      	sLoader.fadeIn(); 
+		      	sLoader.fadeIn();
 
 		      },
 		      success: function(msg) {
 
 	            // Message was sent
 	            if (msg == 'OK') {
-	            	sLoader.fadeOut(); 
+	            	sLoader.fadeOut();
 	               $('#message-warning').hide();
 	               $('#contactForm').fadeOut();
-	               $('#message-success').fadeIn();   
+	               $('#message-success').fadeIn();
 	            }
 	            // There was an error
 	            else {
-	            	sLoader.fadeOut(); 
+	            	sLoader.fadeOut();
 	               $('#message-warning').html(msg);
 		            $('#message-warning').fadeIn();
 	            }
@@ -253,13 +253,13 @@
 		      },
 		      error: function() {
 
-		      	sLoader.fadeOut(); 
+		      	sLoader.fadeOut();
 		      	$('#message-warning').html("Something went wrong. Please try again.");
 		         $('#message-warning').fadeIn();
 
 		      }
 
-	      });     		
+	      });
   		}
 
 	});
@@ -267,7 +267,7 @@
 
  	/*----------------------------------------------------- */
   	/* Back to top
-   ------------------------------------------------------- */ 
+   ------------------------------------------------------- */
 	var pxShow = 300; // height on which the button will show
 	var fadeInTime = 400; // how slow/fast you want the button to show
 	var fadeOutTime = 400; // how slow/fast you want the button to hide
@@ -284,7 +284,7 @@
 				jQuery("#go-top").fadeOut(fadeOutTime);
 			}
 
-		}		
+		}
 
 	});
 
@@ -320,7 +320,6 @@
 		institute: 'Ashadham, Vapi',
 		description: ''
 	};
-	eduTimeline.push(hsc);
 	var be = {
 		degree: 'Bachelor Degree',
 		from: '2008',
@@ -328,7 +327,6 @@
 		institute: 'Charotar Institute Of Technology',
 		description: 'Completed my Bachelor Of Engineering (BE) in Information Technology with 7.55 CGPA.'
 	};
-	eduTimeline.push(be);
 	var germany = {
 		degree: 'Exchange Program',
 		from: 'Sep 2012',
@@ -336,6 +334,8 @@
 		institute: 'Study and Internship @ Germany',
 		description: 'This program was curated as a part of MOU signed between Wismar University, Germany and GTU, Ahmedabad, India. Under this program 12 students we chosen from UG and PG programs running under GTU and were given the chance to explore the technology pioneer nation of Germany.' + br + 'Various tech, non-tech programs, socio-cultural meetups, industrial visits and meeting with local politicians were held. This helped the students to gain an insight in their best practices and how those practices can help to achieve high aims and discipline in our nation.'
 	};
+	eduTimeline.push(hsc);
+	eduTimeline.push(be);
 	eduTimeline.push(germany);
 
 	//WORK EXPERIENCE
@@ -351,7 +351,6 @@
 					'As a part of professional training at VCS, Ahmedabad I was given 2 projects to accomplish which were companies internal projects.' + br +
 					'I was responsible for documentation and development of two projects.' + br + '1) Project Knowledge Base' + br + '2) Project Review.'
 	};
-	workExp.push(vcs);
 	var bhavyaMlm = {
 		company: 'Bhavya Technologies',
 		link: 'http://www.bhavyatech.co.in/',
@@ -361,7 +360,6 @@
 		description: 'This was my final year project. With support from Bhavya technologies, Ahmedabad this project was the first major project carried out by me in team of four.' + br +
 					'This was an attempt to create a customised MLM system which could be easily configured to matrix as desired by the client.'
 	};
-	workExp.push(bhavyaMlm);
 	var radix = {
 		company: 'Radix',
 		link: 'http://radixweb.com/',
@@ -371,9 +369,9 @@
 		description: 'Radix provides outsourcing services in the fields of Cloud Computing, Printing related software and web and mobile apps development services.' + br +
 					'As a Software Engineer, I was a part of development team where my roles and responsibilities includes but not limited to overall development of project from designing, development, unit testing as well as deployment.'
 	};
-	workExp.push(radix);
 	var fundoo = {
 		company: 'Fundoo Solutions',
+		subCompany: '(Later Acqui-hired by Hopscotch.in)',
 		link: 'http://www.befundoo.com',
 		from: 'October 2014',
 		to: 'May 2015',
@@ -384,17 +382,53 @@
 		'2) Internationalisation support: Module and routes based efficient internationalisation system for multiple languages.\n\n' + br +
 		'3) Working on small parts of multiple android app.'
 	};
-	workExp.push(fundoo);
 	var hs = {
 		company: 'Hopscotch',
 		link: 'https://www.hopscotch.in',
 		from: 'June 2015',
-		to: 'Present',
+		to: 'May 2018',
 		title: 'Software Engineer',
 		description: 'Hopscotch.in is a leading discovery-based e-Commerce destination for Indian moms, offering a wide range of curated children’s merchandise at affordable prices.'
 	};
+	var pg = {
+		company: 'PeopleGrove',
+		link: 'https://www.peoplegrove.com',
+		from: 'May 2018',
+		to: 'Nov 2019',
+		title: 'Software Engineer & Team Lead',
+		description: 'PeopleGrove connects every student and all alumni with the network and resources they need to realize their full potential before, during, and after their time in college. Founded in 2015, PeopleGrove works with over 300 institutions worldwide, including Stanford University, the University of Michigan, and many other universities across the globe.\n\n' + br +
+			'My Roles included:\n' + br +
+			'- Involve in discussion and decision making of various projects involving <b>Alumni module.</b>\n\n' + br +
+			'- Fullstack Development of <b>Onboarding Module</b>\n' + br +
+			'- Mangaing the team of UI/UX designers + QAs + Devs + Project Managers\n' + br +
+			'- Maintaining accessibility standards across the portal for specially-abled users\n' + br +
+			'- Implementing micro-frontends in AngularJs 1.x & React/Redux'
+		,
+	};
+	var hb = {
+		company: 'HalalBox',
+		subCompany: '(DZ Fresh Food Pvt Ltd)',
+		link: 'https://www.halalbox.in',
+		from: 'Nov 2019',
+		to: 'Present',
+		title: 'Tech Lead',
+		description: 'HalalBox is a food tech company aiming to improve India’s low nutrition ranking by delivering fresh and protein rich non-veg food items like eggs, chicken, meat, seafood etc at your door-step within 90 mins.\n' + br +
+			'I started working with HalalBox as a freelancer and then onboarded as one of the core member and first member in tech team. I started as Tech Lead and since then I\'m playing multiple role irrespective of title.\n' + br +
+			'My roles and responsibility includes but not limited to \n' + br +
+			'- Recruitment\n'+ br +
+			'- Managing cross functional activities\n' + br +
+			'- Feature development and designing\n' + br +
+			'- Developing analytics tools for marketing and campaigning team\n' + br +
+			'- Taking care of frontend and app releases\n' + br +
+			'- Development of internal tools for operations team and customer care team.'
+	};
+	workExp.push(bhavyaMlm);
+	workExp.push(vcs);
+	workExp.push(radix);
+	workExp.push(fundoo);
 	workExp.push(hs);
-
+	workExp.push(pg);
+	workExp.push(hb);
 	createEduTimelines(eduTimeline);
 	createWorkTimelines(workExp);
 
@@ -416,7 +450,7 @@
 		$.each(work, function(idx, w) {
 			var template = '' +
 					'<div class="timeline-block"><div class="timeline-ico"><i class="fa fa-briefcase"></i></div>' +
-					'<div class="timeline-header"><a href="' + w.link + '" title="' + w.link + '" target="_blank"><h3 class="company">' + w.company + '</h3></a><p>' + w.from + ' - ' + w.to + '</p></div>' +
+					'<div class="timeline-header"><a href="' + w.link + '" title="' + w.link + '" target="_blank"><h3 class="company">' + w.company + '</h3>'+ (w.subCompany ? ('<h5 class="sub-company">' + w.subCompany + '</h5>') : '') +'</a><p>' + w.from + ' - ' + w.to + '</p></div>' +
 					'<div class="timeline-content"><h4>' + w.title + '</h4>' +
 					'<p>' + w.description + '</p></div></div> <!-- /timeline-block -->';
 			expStr += template;
