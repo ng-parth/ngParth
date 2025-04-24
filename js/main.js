@@ -212,6 +212,7 @@
 	$('input, textarea, select').placeholder()
 
 
+
   	/*---------------------------------------------------- */
 	/*	contact form
 	------------------------------------------------------ */
@@ -220,7 +221,15 @@
 	$('#contactForm').validate({
 
 		/* submit via ajax */
-		submitHandler: function(form) {
+		submitHandler: function(form, e) {
+			// console.log('args: ', arguments)
+			// e.preventDefault();
+			// debugger;
+			// grecaptcha.enterprise.ready(async () => {
+			// 	const token = await grecaptcha.enterprise.execute('6LcyPkopAAAAABszSm2qI0NS7nMKlNe6hoDraKCC', {action: 'LOGIN'});
+			// 	console.log('Token : ', token);
+			// 	debugger
+			//   });
 
 			var sLoader = $('#submit-loader');
 
